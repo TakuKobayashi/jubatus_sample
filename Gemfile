@@ -46,6 +46,13 @@ gem 'omniauth-facebook'
 #認証後twitterにtweetするためのもの
 gem 'twitter'
 
+#非同期処理用
+gem "delayed_job"
+gem "delayed_job_active_record"
+
+# デプロイ先でデーモンとして動かすのに必要
+gem "daemons"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

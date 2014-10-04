@@ -18,4 +18,7 @@
 #
 
 class SentenceJubatusResult < ActiveRecord::Base
+  def self.exec_jubatus
+  	
+  end
 end

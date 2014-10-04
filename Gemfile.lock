@@ -46,6 +46,12 @@ GEM
     coffee-script-source (1.8.0)
     cool.io (1.1.1)
       iobuffer (>= 1.0.0)
+    daemons (1.1.9)
+    delayed_job (4.0.4)
+      activesupport (>= 3.0, < 4.2)
+    delayed_job_active_record (4.0.2)
+      activerecord (>= 3.0, < 4.2)
+      delayed_job (>= 3.0, < 4.1)
     equalizer (0.0.9)
     erubis (2.7.0)
     execjs (2.2.1)
@@ -187,6 +193,9 @@ DEPENDENCIES
   activerecord-import
   annotate
   coffee-rails (~> 4.0.0)
+  daemons
+  delayed_job
+  delayed_job_active_record
   jbuilder (~> 2.0)
   jquery-rails
   jubatus
