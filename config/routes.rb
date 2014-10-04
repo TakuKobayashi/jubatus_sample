@@ -53,4 +53,13 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  resource :top, controller: :top, only: []
+
+  resource :twitter, controller: :twitter do
+        get :index
+      end
+
+  get "/auth/:provider/callback" => "sns_connections#create"
+
+  root to: "top#index"
 end
