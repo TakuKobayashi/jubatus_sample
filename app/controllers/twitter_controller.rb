@@ -4,6 +4,14 @@ class TwitterController < BaseController
   before_filter :twitter_client
 
   def index
+  	@sentences = @user.sentences
+  end
+
+  def create
+  	s = @user.sentences.new(params[:sentence])
+  	s.type = "Tweet"
+  	s.save!
+  	redirect_to twitter_url
   end
 
   private
@@ -17,11 +25,11 @@ class TwitterController < BaseController
   end
 
   def twitter_client
-    @twitter_client = Twitter::REST::Client.new(
+    @twitter_client = Twitter::Client.new(
       consumer_key: "FsRNQOHICbiLaelPwW9GQ6Okb", 
       consumer_secret: "Doz7ypYbxH87zIvlgxcwezDYgHkvynQ589xok9vHfVowUXzHqE",
-      oauth_token:     @sns.token,
-      oauth_token_secret: @sns.token_secret
+      access_token:     @sns.token,
+      access_token_secret: @sns.token_secret
     )
   end
 end

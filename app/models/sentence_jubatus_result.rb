@@ -30,14 +30,5 @@ class SentenceJubatusResult < ActiveRecord::Base
         train_data << [sentence.id.to_s, Jubatus::Common::Datum.new(attribute)]
       end
   	end
-  	=begin
-  	cli.train(train_data)
-  	results = client.classify(test_data)
-    results.each { |result|
-      result.each { |r|
-        puts(r.label + " " + r.score.to_s)
-      }
-    }
-    =end
   end
 end
