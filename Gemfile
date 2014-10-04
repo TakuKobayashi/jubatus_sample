@@ -38,6 +38,14 @@ gem 'activerecord-import'
 
 gem 'jubatus'
 
+#マルチプラットフォームに対応したOauth認証用
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+
+#認証後twitterにtweetするためのもの
+gem 'twitter'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
